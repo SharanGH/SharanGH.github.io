@@ -1,0 +1,281 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+  overflow-x: hidden;
+}
+
+.navbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navitem {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navitem:hover {
+  color: #00bcd4;
+}
+
+
+.rightpicture {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: calc(100vw - 200px);
+  background-image: url("/blurred-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6); 
+  z-index: -1;
+}
+
+
+.profiel {
+  margin-left: 200px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10%;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.profiel-foto img {
+  width: 300px;
+  height: auto;
+  border-radius: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  mask: 100%, 100%;
+}
+
+.profiel-inhoud h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profiel-inhoud h1 span {
+  color: #00bcd4;
+}
+
+.profiel-inhoud p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #eee; 
+}
+
+.btn {
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0097a7;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .profiel-foto img {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .rightpicture {
+    width: 100%;
+  }
+
+  body {
+    margin-left: 0;
+  }
+
+  .navbackground {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.projects {
+  margin-left: 200px; 
+  padding: 60px 10%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0 0 10px;
+  color: #007bff;
+}
+
+.card-content p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .projects {
+    margin-left: 0;
+    padding: 40px 20px;
+  }
+}
+
+.contact-info {
+  margin-left: 200px;
+  padding: 60px 10%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contact-info .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 15px;
+
+}
+
+.contact-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contact-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+  .contact-info {
+    margin-left: 0;
+    padding: 40px 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
